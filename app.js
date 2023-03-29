@@ -4,6 +4,11 @@ const bodyparser = require('body-parser')
 const cors=require('cors')
 
 const productRouter= require('./Routes/productrouter')
+const imageRouter= require('./Routes/imagerouter')
+const dealerRouter= require('./Routes/dealerrouter')
+const blueRouter= require('./Routes/bluerouter')
+const inventoryRouter= require('./Routes/inventoryrouter')
+
 //const detailsRouter= require('./Routes/detailsrouter')
 //const userRouter = require('./routes/userrouter')
 
@@ -30,7 +35,11 @@ app.use(cors())
 //app.use('/userRouter',userRouter)
 //app.use('/itemRouter',itemRouter)
 app.use('/productRouter',productRouter)
-//app.use('/detailsRouter',detailsRouter)
+app.use('/imageRouter',imageRouter)
+app.use('/dealerRouter',dealerRouter)
+app.use('/bluerouter',blueRouter)
+app.use('/inventoryrouter',inventoryRouter)
+
 //app.use(cartRouter)
 
 module.exports = app;

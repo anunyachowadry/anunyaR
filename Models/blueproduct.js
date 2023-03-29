@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const ObjectID = mongoose.Schema.Types.ObjectId
 
-const productSchema = new mongoose.Schema({
+const blueproductSchema = new mongoose.Schema({
 
    Name:{
        type: String,
@@ -38,14 +38,11 @@ const productSchema = new mongoose.Schema({
       },
       ProductId:{
          type:String
-      },
-      Totalprice:{
-         type:String
       }
     
    
      })
 
-    const Product = mongoose.model('product', productSchema)
+    const Blueproduct = mongoose.model('blueproduct', blueproductSchema)
     
-module.exports = Product
+module.exports = Blueproduct
